@@ -1,7 +1,7 @@
 {
   "name": "cinemeld-webapp",
   "version": "0.1.0",
-  "homepage": "https://willwalker753.github.io/cinemeld-webapp",
+  "homepage": "https://willwalker753.github.io/cinemeld-webapp/",
   "private": true,
   "dependencies": {
     "react": "^18.2.0",
