@@ -1,0 +1,9 @@
+FROM node:20.2.0-alpine3.16
+
+RUN mkdir -p /code/source
+COPY /source /code/source
+WORKDIR /code/source
+
+RUN npm install
+
+CMD ["npm", "start"]
