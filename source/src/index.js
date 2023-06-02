@@ -13,7 +13,7 @@ root.render(
                 <Route exact path="/about" element={<About />} />
                 <Route exact path="/" element={<App />} />
             </Routes>
-        </BrowserRouter>
+        </BrowserRouter> 
     </React.StrictMode>
 );
 
