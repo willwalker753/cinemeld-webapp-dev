@@ -26,7 +26,7 @@ jobs:
       run: cd source
     
     - name: Install NPM packages
-      run: npm ci
+      run: pwd && ls && npm ci
     
     - name: Build project
       run: npm run build
