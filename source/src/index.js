@@ -6,9 +6,11 @@ import About from './About';
 import './main.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const basename = `/${window.location.pathname.split("/")[1]}/`;
+
 root.render(
     <React.StrictMode>
-        <BrowserRouter>
+        <BrowserRouter basename={basename}>
             <Routes>
                 <Route exact path="/about" element={<About />} />
                 <Route exact path="/" element={<App />} />
