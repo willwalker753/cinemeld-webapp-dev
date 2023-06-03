@@ -4,6 +4,4 @@ RUN mkdir -p /code/source
 COPY /source /code/source
 WORKDIR /code/source
 
-RUN npm install
-
-CMD ["npm", "start"]
+CMD ["/bin/sh", "-c", "npm install; npm start"]
