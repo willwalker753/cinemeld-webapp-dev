@@ -1,0 +1,13 @@
+.poster-card-container {
+    align-items: center;
+    border-radius: .2rem;
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    height: 15rem;
+    overflow-x: hidden;
+}
+
+.poster-card-image {
+    height: 100%;
+}

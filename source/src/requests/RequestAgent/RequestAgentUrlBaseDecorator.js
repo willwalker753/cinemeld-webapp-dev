@@ -28,7 +28,7 @@ class RequestAgentUrlBaseDecorator extends RequestAgentInterface {
             safePath = `/${safePath}`;
         }
 
-        return this.urlBase + safePath;
+        return safeUrlBase + safePath;
     }
 }
 

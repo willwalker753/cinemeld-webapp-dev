@@ -6,6 +6,10 @@ class GeneralBackendApiClient {
     healthcheck = () => {
         return this.requestAgent.get("/");
     }
+
+    getTrendingMovies = () => {
+        return this.requestAgent.get("/cinemeld/movie/category/trending");        
+    }
 }
 
 export default GeneralBackendApiClient;
