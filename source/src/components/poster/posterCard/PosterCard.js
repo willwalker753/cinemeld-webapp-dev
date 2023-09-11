@@ -3,7 +3,7 @@ import "./posterCard.css";
 
 const PosterCard = ({
     imageUrl,        
-    onClick=()=>null,
+    onClick=null,
     ...rest
 }) => {
     return (

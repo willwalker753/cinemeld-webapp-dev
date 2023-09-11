@@ -1,0 +1,13 @@
+.detailed-poster-card-container {
+    cursor: pointer;
+    position: relative;
+    width: 8rem;
+}
+
+.detailed-poster-card-tray {
+    padding: .2rem;
+}
+
+.detailed-poster-card-tray .title {
+    font-size: .9rem;
+}
