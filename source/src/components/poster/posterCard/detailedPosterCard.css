@@ -4,6 +4,12 @@
     width: 8rem;
 }
 
+.detailed-poster-card-rating {
+    position: absolute;
+    top: .2rem;
+    right: .2rem;
+}
+
 .detailed-poster-card-tray {
     padding: .2rem;
 }

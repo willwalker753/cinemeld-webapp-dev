@@ -17,19 +17,31 @@ const PosterCardCategoryRow = ({
                 <h2>{categoryTitle}</h2>
             </div>
             <div className="poster-card-category-row">
-                {cards.map((card, index) => {
-                    const { title, genreList, voteAverage, imageUrl, onClick } = card;                
-                    return (
-                        <DetailedPosterCard
-                            key={index}
-                            title={title}
-                            genreList={genreList}
-                            voteAverage={voteAverage}
-                            imageUrl={imageUrl}
-                            onClick={onClick}
-                        />
-                    )
-                })}
+                <swiper-container
+                    slides-per-view="auto"
+                    // loop="true"
+                    // free-mode="true"
+                >
+                    {cards.map((card, index) => {
+                        const { title, genreList, votePercent, voteFactor, imageUrl, onClick } = card;                
+                        return (
+                            <swiper-slide
+                                key={index}
+                                lazy="true"
+                            >
+                                <DetailedPosterCard
+                                    key={index}
+                                    title={title}
+                                    genreList={genreList}
+                                    votePercent={votePercent}
+                                    voteFactor={voteFactor}
+                                    imageUrl={imageUrl}
+                                    onClick={onClick}
+                                />
+                            </swiper-slide>
+                        )
+                    })}
+                </swiper-container>
             </div>
         </div>
     )

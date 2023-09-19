@@ -7,12 +7,21 @@
 }
 
 .poster-card-category-row {
-    display: flex;
     width: 100%;
-    overflow-y: scroll;
-    padding: 0 .8rem;
+    --poster-card-category-row-spacing: .8rem;
 }
 
-.poster-card-category-row > * {
-    margin: 0 .5rem;
+.poster-card-category-row swiper-slide {
+    width: min-content;
+    margin: 0 var(--poster-card-category-row-spacing);
+}
+
+@media only screen and (min-width: 550px) {
+    .poster-card-category-row swiper-slide:first-of-type {
+        margin-left: calc(2 * var(--poster-card-category-row-spacing));
+    }
+    
+    .poster-card-category-row swiper-slide:last-of-type  {
+        margin-right: calc(2 * var(--poster-card-category-row-spacing));
+    }
 }

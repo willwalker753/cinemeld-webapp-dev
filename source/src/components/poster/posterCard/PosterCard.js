@@ -11,6 +11,7 @@ const PosterCard = ({
             <img 
                 className="poster-card-image"
                 src={imageUrl} 
+                loading="lazy"
             />
         </div>
     )

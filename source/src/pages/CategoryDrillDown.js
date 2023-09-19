@@ -15,7 +15,8 @@ const CategoryDrillDown = () => {
             return {
                 title: result.title,
                 genreList: result.genre_list,
-                voteAverage: result.vote_average,
+                votePercent: result.vote_percent,
+                voteFactor: result.vote_factor,
                 imageUrl: result.poster_url,
                 onClick: () => console.log("click ", result.id)
             }
