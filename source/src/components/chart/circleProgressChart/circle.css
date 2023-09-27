@@ -1,9 +1,4 @@
 .circle-progress-chart {
-  /* Scale */
-  --circle-progress-chart-outer-diameter: .84em;
-  --circle-progress-chart-inner-diameter: .84em;
-  --circle-progress-chart-label-font-size:
-
   /* Color */
   --circle-progress-chart-label-color: var(--color-font-primary);
   --circle-progress-chart-background-color: var(--color-surface-mixed-200);

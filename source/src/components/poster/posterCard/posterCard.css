@@ -3,11 +3,26 @@
     border-radius: .2rem;
     display: flex;
     flex-direction: column;
-    width: 8rem;
-    height: 12rem;
+    height: 9rem;
+    width: 6rem;
     overflow-x: hidden;
 }
 
 .poster-card-image {
     height: 100%;
+}
+
+
+@media only screen and (min-width: 550px) {
+    .poster-card-container {
+        height: 12rem;
+        width: 8rem;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .poster-card-container {
+        height: 15rem;
+        width: 10rem;
+    }
 }

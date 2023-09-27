@@ -8,9 +8,6 @@ const PosterCardCategoryRow = ({
     getMoreCards=()=>null,
     ...rest
 }) => {    
-
-// getMoreCards
-
     return (
         <div className="poster-card-category-row-container" {...rest}>
             <div className="poster-card-category-row-title-container">

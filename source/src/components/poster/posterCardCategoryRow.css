@@ -3,7 +3,8 @@
 }
 
 .poster-card-category-row-title-container {
-    margin: 0 .8rem .8rem .8rem
+    margin: 0 .8rem .8rem .8rem;
+    font-size: 1rem;
 }
 
 .poster-card-category-row {
@@ -23,5 +24,9 @@
     
     .poster-card-category-row swiper-slide:last-of-type  {
         margin-right: calc(2 * var(--poster-card-category-row-spacing));
+    }
+
+    .poster-card-category-row-title-container {
+        font-size: 1.2rem;
     }
 }

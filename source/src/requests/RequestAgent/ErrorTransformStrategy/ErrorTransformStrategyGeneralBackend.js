@@ -6,7 +6,20 @@ class ErrorTransformStrategyGeneralBackend extends ErrorTransformStrategyInterfa
     }
 
     transform = (error) => {
-        alert("do something")
+        // default error
+        let transformedError = {
+            is_error: true,
+            message: "There was an unexpected error. Please try again soon",
+            status: 500
+        }
+
+        // attempt to parse the general backend error
+        try {
+            transformedError.status = error.response.status;
+            transformedError.message = error.response.data.message;
+        } catch(error) {}
+        
+        return transformedError;
     }
 }
 

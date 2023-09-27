@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
-import apiClient from "../requests/apiClient";
+import apiClient from "../requests/GeneralBackend/apiClient";
 import PosterCardCategoryRow from "../components/poster/PosterCardCategoryRow";
+import useAlert from "../hook/useAlert";
 
 const CategoryDrillDown = () => {
     const [ trendingMovieCards, setTrendingMovieCards ] = useState([]);
+    const [ putAlert ] = useAlert();
 
     useEffect(() => {
         getTrendingMovies();
@@ -11,6 +13,9 @@ const CategoryDrillDown = () => {
 
     const getTrendingMovies = async () => {
         const response = await apiClient.getTrendingMovies();
+        if (response.is_error) {
+            putAlert(response.message);
+        }
         const cards = response.data.trending_movies.results.map(result => {
             return {
                 title: result.title,
@@ -37,26 +42,49 @@ const CategoryDrillDown = () => {
                 https://dribbble.com/shots/9956355-SpeedyTV-Streaming-movie-search-engine-redesign
                 https://dribbble.com/shots/10060040-Daily-UI-022-Movie-Search */}
 
-                <li>DONT FORGET ABOUT FIGMA DESIGNS</li>
+                <li>dont forget to reference the figma design (and old draw.io design)</li>
                 
-                <li>add error handling</li>
+                <li>add request error handling</li>
                 
                 <li>add a default movie poster when the image fails (onfail i think)</li>
 
-                <li>add a loading animation for images, like skeleton (something with onload)</li>
+                <li>customize the swiper image loader so it matches the theme</li>
                 
                 <li>add infinite scroll with limit</li>
-
-                {/* <li>add view more button (probably static above list on right)</li> */}
-
-                <li>add different image urls for different sizes (using original big poster right now)</li>
-
-                {/* <li>maybe add metadata bar beneath each movie, like rating </li> */}
             </ul>
+
+            <p>
+                Left off adding an endpoint to get a combined list of movie categories. Also was adding a request cache storage in the webapp. (So i can cache a SUCCESSFUL response for like 5 minutes)
+            </p>
+
             <PosterCardCategoryRow
-                categoryTitle="In The Spotlight"
+                categoryTitle="Trending"
                 cards={trendingMovieCards}
                 getMoreCards={getTrendingMovies}
+            />
+
+            <PosterCardCategoryRow
+                categoryTitle="Now Playing"
+                cards={[]}
+                getMoreCards={() => null}
+            />
+
+            <PosterCardCategoryRow
+                categoryTitle="Viewer Favorites"
+                cards={[]}
+                getMoreCards={() => null}
+            />
+
+            <PosterCardCategoryRow
+                categoryTitle="Action Packed"
+                cards={[]}
+                getMoreCards={() => null}
+            />
+
+            <PosterCardCategoryRow
+                categoryTitle="Comedy"
+                cards={[]}
+                getMoreCards={() => null}
             />
         </div>
     )

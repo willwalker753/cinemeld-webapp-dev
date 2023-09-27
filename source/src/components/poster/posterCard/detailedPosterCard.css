@@ -1,7 +1,6 @@
 .detailed-poster-card-container {
     cursor: pointer;
     position: relative;
-    width: 8rem;
 }
 
 .detailed-poster-card-rating {
@@ -16,4 +15,36 @@
 
 .detailed-poster-card-tray .title {
     font-size: .9rem;
+}
+
+/* rating chart */
+.detailed-poster-card-container .c100 {
+    font-size: 1.4rem;
+
+}
+
+@media only screen and (min-width: 550px) {
+    .detailed-poster-card-container .c100 {
+        font-size: 1.7rem;
+        margin: .05rem;
+    }
+
+    .detailed-poster-card-tray {
+        padding: .3rem .2rem;
+    }
+
+    .detailed-poster-card-tray .title {
+        font-size: 1rem;
+        margin-bottom: .2rem;
+    }
+
+    .detailed-poster-card-tray .subtitle {
+        font-size: .9rem;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .detailed-poster-card-container .c100 {
+        font-size: 2rem;
+    }
 }
