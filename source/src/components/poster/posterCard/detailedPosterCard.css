@@ -10,7 +10,10 @@
 }
 
 .detailed-poster-card-tray {
-    padding: .2rem;
+    padding: .2rem 0;
+}
+.detailed-poster-card-tray > * {
+    padding: 0 .2rem;
 }
 
 .detailed-poster-card-tray .title {
@@ -19,27 +22,35 @@
 
 /* rating chart */
 .detailed-poster-card-container .c100 {
-    font-size: 1.4rem;
-
+    font-size: 1.6rem;
 }
 
 @media only screen and (min-width: 550px) {
     .detailed-poster-card-container .c100 {
-        font-size: 1.7rem;
+        font-size: 1.8rem;
         margin: .05rem;
     }
 
     .detailed-poster-card-tray {
-        padding: .3rem .2rem;
+        padding: .3rem 0;
     }
 
     .detailed-poster-card-tray .title {
         font-size: 1rem;
         margin-bottom: .2rem;
     }
-
+    
     .detailed-poster-card-tray .subtitle {
         font-size: .9rem;
+    }
+
+    /* limit the title and subtitle to 1 line */
+    .detailed-poster-card-tray .title,
+    .detailed-poster-card-tray .subtitle {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: var(--poster-card-width); 
     }
 }
 

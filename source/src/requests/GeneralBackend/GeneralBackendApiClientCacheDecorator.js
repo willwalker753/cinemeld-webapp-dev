@@ -12,7 +12,15 @@ class GeneralBackendApiClientCacheDecorator {
     }
 
     getTrendingMovies = () => {
+        // console.log("DO NOT FORGET TO USE THE REQUEST CACHE AGAIN")
+        // return this.apiClient.getTrendingMovies();
         return this._cacheWrapper("getTrendingMovies", 5 * 60 * 1000);     
+    }
+
+    getHomeSummary = () => {
+        // console.log("DO NOT FORGET TO USE THE REQUEST CACHE AGAIN")
+        // return this.apiClient.getHomeSummary();
+        return this._cacheWrapper("getHomeSummary", 5 * 60 * 1000);     
     }
 
     _cacheWrapper = async (apiClientMethod, ttlMs) => {

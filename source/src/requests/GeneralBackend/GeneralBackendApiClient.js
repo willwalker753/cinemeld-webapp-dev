@@ -10,6 +10,10 @@ class GeneralBackendApiClient {
     getTrendingMovies = () => {
         return this.requestAgent.get("/cinemeld/movie/category/trending");        
     }
+
+    getHomeSummary = () => {
+        return this.requestAgent.get("/cinemeld/movie/summary")
+    }
 }
 
 export default GeneralBackendApiClient;

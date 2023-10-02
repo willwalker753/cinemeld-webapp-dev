@@ -5,7 +5,6 @@ import "./posterCardCategoryRow.css";
 const PosterCardCategoryRow = ({
     categoryTitle="",
     cards=[],
-    getMoreCards=()=>null,
     ...rest
 }) => {    
     return (

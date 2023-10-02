@@ -23,6 +23,10 @@ const Snackbar = () => {
             open={true} 
             autoHideDuration={currentAlert.duration} 
             onClose={() => removeAlert(currentAlert.alertId)}
+            anchorOrigin={{ 
+                vertical: "top", 
+                horizontal: "center" 
+            }}
         >
             <MuiAlert 
                 onClose={() => removeAlert(currentAlert.alertId)} 

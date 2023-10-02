@@ -9,7 +9,8 @@ class RequestAgentErrorTransformDecorator extends RequestAgentInterface {
 
     get = async (url) => {
         try {
-            return await this.agent.get(url);
+            const response = await this.agent.get(url);
+            return response.data;
         } catch (error) {
             return this.errorTransformStrategy.transform(error);
         }
@@ -17,7 +18,8 @@ class RequestAgentErrorTransformDecorator extends RequestAgentInterface {
 
     post = async (url, payload) => {
         try {
-            return await this.agent.post(url, payload);
+            const response = await this.agent.post(url, payload);
+            return response.data;
         } catch (error) {
             return this.errorTransformStrategy.transform(error);
         }
