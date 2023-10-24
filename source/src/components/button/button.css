@@ -1,0 +1,25 @@
+.button-base {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.button-surface {
+    background-color: var(--color-surface-mixed-300);
+    border: none;
+    border-radius: .2rem;
+    color: var(--color-primary-300);
+    transition: all .15s ease-in;
+}
+
+.button-surface:hover {
+    filter: brightness(85%);
+}
+
+.button-surface:disabled,
+.button-surface:disabled:hover {
+    background-color: var(--color-surface-mixed-200);
+    color: var(--color-surface-mixed-500);
+    filter: brightness(100%);
+}
