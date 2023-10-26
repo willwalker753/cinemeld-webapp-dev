@@ -12,7 +12,11 @@ class GeneralBackendApiClient {
     }
 
     getHomeSummary = () => {
-        return this.requestAgent.get("/cinemeld/movie/summary")
+        return this.requestAgent.get("/cinemeld/movie/category/combined_summary")
+    }
+
+    getMovieDetail = ({ movie_id }) => {
+        return this.requestAgent.get(`/cinemeld/movie/detail/${movie_id}`)
     }
 }
 

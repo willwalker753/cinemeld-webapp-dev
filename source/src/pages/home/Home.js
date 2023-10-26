@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import apiClient from "../requests/GeneralBackend/apiClient";
-import PosterCardCategoryRow from "../components/poster/PosterCardCategoryRow";
-import useAlert from "../hook/useAlert";
+import apiClient from "../../requests/GeneralBackend/apiClient";
+import PosterCardCategoryRow from "../../components/poster/PosterCardCategoryRow";
+import useAlert from "../../hook/useAlert";
+import "./home.css";
 
 const Home = () => {
     const [ trendingMovieCards, setTrendingMovieCards ] = useState([]);
@@ -44,7 +45,7 @@ const Home = () => {
     }
 
     return (
-        <div>
+        <div className="home">
             <PosterCardCategoryRow
                 categoryTitle="Trending"
                 cards={trendingMovieCards}

@@ -23,6 +23,10 @@ class GeneralBackendApiClientCacheDecorator {
         return this._cacheWrapper("getHomeSummary", 5 * 60 * 1000);     
     }
 
+    getMovieDetail = (payload) => {
+        return this.apiClient.getMovieDetail(payload);
+    }
+
     _cacheWrapper = async (apiClientMethod, ttlMs) => {
         // if there is a valid cached result then return it
         const cacheResult = this.requestCacheStorage.get(apiClientMethod);
