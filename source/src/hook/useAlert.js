@@ -3,7 +3,7 @@ import { setAlertList } from "../redux/slice/AlertSlice";
 import { v4 as uuidv4 } from "uuid";
 
 const useAlert = () => {
-    const alertList = useSelector((state) => state.alert.alertList);
+    const alertList = useSelector((state) => state.alert.alert_list);
     const dispatch = useDispatch();
 
     /*

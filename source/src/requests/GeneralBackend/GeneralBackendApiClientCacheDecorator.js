@@ -19,8 +19,8 @@ class GeneralBackendApiClientCacheDecorator {
 
     getHomeSummary = () => {
         // console.log("DO NOT FORGET TO USE THE REQUEST CACHE AGAIN")
-        // return this.apiClient.getHomeSummary();
-        return this._cacheWrapper("getHomeSummary", 5 * 60 * 1000);     
+        return this.apiClient.getHomeSummary();
+        // return this._cacheWrapper("getHomeSummary", 5 * 60 * 1000);     
     }
 
     getMovieDetail = (payload) => {

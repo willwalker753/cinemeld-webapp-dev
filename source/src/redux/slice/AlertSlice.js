@@ -3,11 +3,11 @@ import { createSlice } from "@reduxjs/toolkit";
 export const alertSlice = createSlice({
     name: "alert",
     initialState: {
-        alertList: [],
+        alert_list: [],
     },
     reducers: {
         setAlertList: (state, action) => {
-            state.alertList = action.payload;
+            state.alert_list = action.payload;
         },
     }
 })
