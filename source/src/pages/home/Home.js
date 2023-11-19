@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { setMovieDetailPreloadedData } from "../../redux/slice/MovieDetailSlice";
 import apiClient from "../../requests/GeneralBackend/apiClient";
 import PosterCardCategoryRow from "../../components/poster/PosterCardCategoryRow";
-import useAlert from "../../hook/useAlert";
+import useAlert from "../../hooks/useAlert";
 import "./home.css";
 
 const Home = () => {

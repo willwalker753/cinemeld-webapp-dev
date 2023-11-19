@@ -32,6 +32,7 @@ const ProgressiveLoaderDecision = ({
 
     // otherwise show a loader...
     //  because the data is not set, and the request is not done
+    console.log(loaderChildren)
     return loaderChildren;
 }
 

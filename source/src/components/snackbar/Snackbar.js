@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import useAlert from "../../hook/useAlert";
+import useAlert from "../../hooks/useAlert";
 import MuiSnackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
 

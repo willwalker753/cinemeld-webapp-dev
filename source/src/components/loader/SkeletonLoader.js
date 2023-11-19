@@ -8,7 +8,8 @@ const SkeletonLoader = ({
     return (
         <Skeleton 
             variant={variant} 
-            animation="wave" 
+            // animation="wave" 
+            sx={{ bgcolor: "grey.700" }}
             {...rest} 
         />
     )
