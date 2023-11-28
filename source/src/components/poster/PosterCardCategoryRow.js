@@ -69,6 +69,27 @@ const PosterCardCategoryRow = ({
                 <swiper-container
                     id={swiperContainerId}
                     slides-per-view="auto"
+
+
+                /*
+
+                    Left off here
+
+                    swiper is slow/jerky on mobile in multiple browsers.
+
+                    i added css-mode below, and that might fix it, need to test
+
+                    if it does then i need to fix other stuff. 
+                        like scrolling on desktop, 
+                        the spacing on the first (and maybe last slide), 
+                        and the number of slides scrolled each time the nav button is clicked
+
+
+                */
+
+
+
+                    css-mode="true"
                     // loop="true"
                     // free-mode="true"
                     // navigation="true"

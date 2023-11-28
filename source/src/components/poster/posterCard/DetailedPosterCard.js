@@ -36,12 +36,14 @@ const DetailedPosterCard = ({
             <PosterCard 
                 imageUrl={imageUrl}
             />
-            <div className="detailed-poster-card-rating" title="User Rating">
-                <CircleProgressChart 
-                    percent={chartPercent}
-                    label={chartLabel}
-                />
-            </div>
+            {chartPercent > 0 && (
+                <div className="detailed-poster-card-rating" title="User Rating">
+                    <CircleProgressChart 
+                        percent={chartPercent}
+                        label={chartLabel}
+                    />
+                </div>
+            )}
             <div className="detailed-poster-card-tray">
                 <p className="title">{title}</p>
                 <p className="subtitle">{genreDisplayText}</p>
