@@ -87,9 +87,22 @@ const PosterCardCategoryRow = ({
 
                 */
 
+                    simulate-touch={true} // Enable click and drag on desktop
+                    breakpoints={{
+                        // Adjust settings based on viewport width
+                        768: {
+                            slidesPerView: 3, // Number of slides visible on smaller screens
+                            simulateTouch: true, // Still enable touch simulation on smaller screens
+                        },
+                        // Add more breakpoints as needed
+                    }}
 
 
-                    css-mode="true"
+
+                    // css-mode="true"
+                    // cssMode={true} // Enable CSS mode for better mobile performance
+                    // navigation={true} // Show navigation buttons
+                    // simulateTouch={true} // Enable click and drag on desktop
                     // loop="true"
                     // free-mode="true"
                     // navigation="true"
