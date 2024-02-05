@@ -20,6 +20,11 @@
     font-size: .9rem;
 }
 
+.detailed-poster-card-tray .title,
+.detailed-poster-card-tray .subtitle {
+    width: var(--poster-card-width); 
+}
+
 /* rating chart */
 .detailed-poster-card-container .c100 {
     font-size: 1.6rem;
@@ -44,13 +49,15 @@
         font-size: .9rem;
     }
 
-    /* limit the title and subtitle to 1 line */
+    /* 
+    when the poster is larger, we dont want the title to wrap multiple lines,
+    so limit the title and subtitle to 1 line 
+    */
     .detailed-poster-card-tray .title,
     .detailed-poster-card-tray .subtitle {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        width: var(--poster-card-width); 
     }
 }
 

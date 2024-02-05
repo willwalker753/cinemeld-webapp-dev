@@ -1,3 +1,10 @@
+/* 
+
+Carousel sizing related styles are in posterCardCategoryRowSplide.css
+
+*/
+
+
 .poster-card-category-row-container {
     margin-bottom: .5rem;
 }
@@ -14,25 +21,6 @@
     display: none;
 }
 
-/* .poster-card-category-row {
-    width: 100%;
-    --poster-card-category-row-spacing: .8rem;
-}*/
-
-/* .poster-card-category-row-carousel {
-    --poster-card-height: 12rem;
-    --poster-card-width: calc(var(--poster-card-height) * 2 / 3);
-} */
-
-/* .poster-card-category-row-carousel .poster-card-container {
-    height: var(--poster-card-height);
-    width: var(--poster-card-width);
-} */
-
-/* ul.poster-card-category-row-carousel-slides {
-    width: 100% !important;
-}  */
-
 @media only screen and (min-width: 550px) {
     .poster-card-category-row-title-container {
         font-size: 1.2rem;
@@ -48,11 +36,6 @@
         font-size: 1.7rem;
         margin-left: .7rem;
     }
-
-    /* .poster-card-category-row-carousel {
-        --poster-card-height: 12rem;
-        margin-bottom: 1.5rem;
-    } */
 }
 
 @media only screen and (min-width: 800px) {
@@ -69,9 +52,4 @@
         font-size: 1.9rem;
         margin-left: .8rem;
     }
-
-    /* .poster-card-category-row-carousel {
-        --poster-card-height: 15rem;
-        margin-bottom: 2.5rem;
-    } */
 }

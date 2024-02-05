@@ -1,3 +1,27 @@
 .poster-card-category-row-container .splide__pagination {
     display: none;
 }
+
+.poster-card-category-row-container {
+    --poster-card-height: 12rem;
+    --poster-card-width: calc(var(--poster-card-height) * 2 / 3);
+}
+
+.poster-card-category-row-container .poster-card-container {
+    height: var(--poster-card-height);
+    width: var(--poster-card-width);
+}
+
+@media only screen and (min-width: 550px) {
+    .poster-card-category-row-container {
+        --poster-card-height: 12rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .poster-card-category-row-container {
+        --poster-card-height: 15rem;
+        margin-bottom: 2.5rem;
+    }
+}
