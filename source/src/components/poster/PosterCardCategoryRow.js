@@ -2,7 +2,8 @@ import React, { useMemo, useState, useEffect, useRef } from "react";
 import DetailedPosterCard from "./posterCard/DetailedPosterCard";
 import Button from "../button/Button";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
-import Glide from '@glidejs/glide'
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/react-splide/css';
 import "./posterCardCategoryRow.css";
 
 const PosterCardCategoryRow = ({
@@ -10,41 +11,42 @@ const PosterCardCategoryRow = ({
     cards=[],    
     ...rest
 }) => {    
-    const glideRef = useRef(null);
+    // const glideRef = useRef(null);
     // const slideCountPerClick = useMemo(() => 3, []); // the number of slides that are advanced when the next or prev button is clicked
     // const [ prevButtonDisabled, setPrevButtonDisabled ] = useState(true);
     // const [ nextButtonDisabled, setNextButtonDisabled ] = useState(false);
 
-    useEffect(() => {
-        setTimeout(() => {
+    // useEffect(() => {
+    //     setTimeout(() => {
 
-            const glide = new Glide(glideRef.current, {
-                type: 'slider',
-                // bound: true, // true = dont show partial view of slides at the end
-                gap: 10, // pixel space between slides
-                swipeThreshold: 80, // pixels of mobile swiping required to change slides
-                dragThreshold: 120, // pixels of desktop swiping required to change slides
-                perTouch: false, // max number of slides to swipe at once
-                touchRatio: 0.7,
-                animationDuration: 200,
-                rewind: false,
-                perView: 7,
-                breakpoints: {
-                    800: {
-                        perView: 3,
-                    },
-                    1200: {
-                        perView: 5,
-                    },
-                }
-            })
-            glide.mount()
-        },500)
+    //         const glide = new Glide(glideRef.current, {
+    //             type: 'slider',
+    //             // bound: true, // true = dont show partial view of slides at the end
+    //             gap: 10, // pixel space between slides
+    //             swipeThreshold: 80, // pixels of mobile swiping required to change slides
+    //             dragThreshold: 120, // pixels of desktop swiping required to change slides
+    //             perTouch: false, // max number of slides to swipe at once
+    //             touchRatio: 0.7,
+    //             animationDuration: 200,
+    //             rewind: false,
+    //             perView: 7,
+    //             breakpoints: {
+    //                 800: {
+    //                     perView: 3,
+    //                 },
+    //                 1200: {
+    //                     perView: 5,
+    //                 },
+    //             }
+    //         })
+    //         glide.mount()
+    //     },500)
 
-        // return () => {
-        //     glide.destroy();
-        // };
-    }, [])
+    //     // return () => {
+    //     //     glide.destroy();
+    //     // };
+    // }, [])
+
     // const getSwiper = () => {
     //     return document.getElementById(swiperContainerId).swiper;
     // }
@@ -113,10 +115,27 @@ const PosterCardCategoryRow = ({
             
             */}
 
-
-
-
-            <div className="poster-card-category-row">
+            <Splide 
+                aria-label=""
+            >                
+                {cards.map((card, index) => {
+                    const { title, genreList, votePercent, voteFactor, imageUrl, onClick } = card;                
+                    return (
+                        <SplideSlide>
+                            <DetailedPosterCard
+                                key={index}
+                                title={title}
+                                genreList={genreList}
+                                votePercent={votePercent}
+                                voteFactor={voteFactor}
+                                imageUrl={imageUrl}
+                                onClick={onClick}
+                            />
+                        </SplideSlide>
+                    )
+                })}
+            </Splide>
+            {/* <div className="poster-card-category-row">
                 <div 
                     ref={glideRef} 
                     className="poster-card-category-row-carousel"
@@ -148,7 +167,42 @@ const PosterCardCategoryRow = ({
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> */}
+
+
+            {/* <div className="poster-card-category-row">
+                <div 
+                    ref={glideRef} 
+                    className="poster-card-category-row-carousel"
+                >
+                    <div 
+                        className="glide__track" 
+                        data-glide-el="track"
+                    >
+                        <ul className="poster-card-category-row-carousel-slides glide__slides">
+                            {cards.map((card, index) => {
+                                const { title, genreList, votePercent, voteFactor, imageUrl, onClick } = card;                
+                                return (
+                                    <li 
+                                        key={index}
+                                        className="glide__slide"
+                                    >
+                                        <DetailedPosterCard
+                                            key={index}
+                                            title={title}
+                                            genreList={genreList}
+                                            votePercent={votePercent}
+                                            voteFactor={voteFactor}
+                                            imageUrl={imageUrl}
+                                            onClick={onClick}
+                                        />
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    </div>
+                </div>
+            </div> */}
         </div>
     )
 }

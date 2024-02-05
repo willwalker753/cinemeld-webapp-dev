@@ -4,8 +4,6 @@ import PageRouter from "./PageRouter";
 import { Provider } from "react-redux"
 import store from "./redux/store"
 import "./main.css";
-import "@glidejs/glide/dist/css/glide.core.min.css";
-import "@glidejs/glide/dist/css/glide.theme.min.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

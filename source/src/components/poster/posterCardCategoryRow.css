@@ -14,7 +14,7 @@
     display: none;
 }
 
-.poster-card-category-row {
+/* .poster-card-category-row {
     width: 100%;
     --poster-card-category-row-spacing: .8rem;
 }
@@ -31,7 +31,7 @@
 
 ul.poster-card-category-row-carousel-slides {
     width: 100% !important;
-}
+} */
 
 @media only screen and (min-width: 550px) {
     .poster-card-category-row-title-container {
@@ -49,13 +49,13 @@ ul.poster-card-category-row-carousel-slides {
         margin-left: .7rem;
     }
 
-    .poster-card-category-row-carousel {
+    /* .poster-card-category-row-carousel {
         --poster-card-height: 12rem;
     }
 
     .poster-card-category-row-carousel {
         margin-bottom: 1.5rem;
-    }
+    } */
 }
 
 @media only screen and (min-width: 800px) {
