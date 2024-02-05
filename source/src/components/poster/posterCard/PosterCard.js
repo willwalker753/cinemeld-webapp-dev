@@ -4,6 +4,7 @@ import "./posterCard.css";
 const PosterCard = ({
     imageUrl,        
     onClick=null,
+    imgProps={},
     ...rest
 }) => {
     return (
@@ -11,7 +12,7 @@ const PosterCard = ({
             <img 
                 className="poster-card-image"
                 src={imageUrl} 
-                loading="lazy"
+                {...imgProps}
             />
         </div>
     )

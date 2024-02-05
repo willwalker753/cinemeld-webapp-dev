@@ -10,6 +10,7 @@ const DetailedPosterCard = ({
     voteFactor,
     imageUrl,        
     onClick=null,
+    imgProps={},
 }) => {
     const genreDisplayText = useMemo(() => {
         const limitedGenreList = genreList.slice(0, 2);
@@ -35,6 +36,7 @@ const DetailedPosterCard = ({
         <div className="detailed-poster-card-container" onClick={onClick}>            
             <PosterCard 
                 imageUrl={imageUrl}
+                imgProps={imgProps}
             />
             {chartPercent > 0 && (
                 <div className="detailed-poster-card-rating" title="User Rating">
