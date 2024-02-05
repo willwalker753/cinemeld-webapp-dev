@@ -20,7 +20,7 @@ const MovieDetail = () => {
     const [ isMovieDetailRequestDone, setIsMovieDetailRequestDone ] = useState(false);
 
     useEffect(() => {
-        window.scrollTo({ top: 0, behavior: "smooth" })
+        window.scrollTo({ top: 0, behavior: "instant" })
     })
 
     // get the movie details on mount
